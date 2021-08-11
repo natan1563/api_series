@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\episodio;
+use App\Models\Episodio;
 use Illuminate\Http\Request;
 
 class EpisodiosController extends BaseController

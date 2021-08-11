@@ -10,8 +10,6 @@ abstract class BaseController {
 
     public function index(Request $request)
     {
-        $offset = ($request->page - 1) * $request->per_page;
-
         return $this->classe::paginate($request->per_page);
     }
 

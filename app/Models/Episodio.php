@@ -10,7 +10,7 @@ class Episodio extends Model
     public $timestamps  = false;
     protected $fillable = ['temporada', 'numero', 'assistido', "serie_id"];
     protected $appends  = ['links'];
-    
+
     public function serie()
     {
         return $this->belongsTo(Serie::class);
@@ -21,7 +21,7 @@ class Episodio extends Model
         return $assistido;
     }
 
-    public function getLinksAttribute($links): array
+    public function getLinksAttribute(): array
     {
         return [
             'self'  => '/api/episodios/' . $this->id,
